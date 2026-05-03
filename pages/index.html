@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bachelor Party 2026</title>
+
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #121a2b;
+      --accent: #4f46e5;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      padding: 48px 20px 32px;
+      text-align: center;
+      background: radial-gradient(circle at top, #1e293b, var(--bg));
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0 0 8px;
+    }
+
+    header p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      margin-top: 0;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin: 0;
+      color: var(--text);
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(79,70,229,0.15);
+      color: #a5b4fc;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      margin-top: 6px;
+    }
+
+    .btn {
+      display: block;
+      text-align: center;
+      background: var(--accent);
+      color: white;
+      padding: 12px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    iframe {
+      width: 100%;
+      height: 220px;
+      border: 0;
+      border-radius: 12px;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 10px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    /* Desktop enhancements */
+    @media (min-width: 768px) {
+      header h1 {
+        font-size: 2.6rem;
+      }
+
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      iframe {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>🍻 Bachelor Party 2026</h1>
+  <p>One weekend. No regrets. Maximum chaos.</p>
+  <div class="badge">12–14 June • Hamburg</div>
+</header>
+
+<div class="container">
+
+  <div class="grid">
+
+    <div class="card">
+      <h2>📅 Overview</h2>
+      <p class="muted">
+        A weekend designed for good friends, bad decisions, and unforgettable memories.
+      </p>
+      <ul>
+        <li>Location: Hamburg</li>
+        <li>Duration: 3 days</li>
+        <li>Theme: Survival + fun</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🗳️ Vote</h2>
+      <p class="muted">Help decide Saturday’s main activity.</p>
+      <a class="btn" href="https://forms.gle/your-form-link" target="_blank">
+        Open Poll
+      </a>
+    </div>
+
+    <div class="card">
+      <h2>🗓️ Schedule</h2>
+
+      <p><strong>Friday</strong></p>
+      <ul>
+        <li>18:00 Arrival</li>
+        <li>20:00 Dinner</li>
+        <li>22:00 Bar crawl</li>
+      </ul>
+
+      <p><strong>Saturday</strong></p>
+      <ul>
+        <li>10:00 Breakfast</li>
+        <li>12:00 Activity</li>
+        <li>18:00 Dinner</li>
+        <li>22:00 Party</li>
+      </ul>
+
+      <p><strong>Sunday</strong></p>
+      <ul>
+        <li>11:00 Brunch</li>
+        <li>14:00 Goodbye 👋</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>📍 Location</h2>
+      <p class="muted">Base location: Hamburg city center</p>
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d..."
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <div class="card">
+      <h2>📌 Info</h2>
+      <ul>
+        <li>Bring ID</li>
+        <li>Comfortable shoes</li>
+        <li>Budget for activities</li>
+        <li>Recovery skills required</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>📲 RSVP</h2>
+      <p class="muted">Confirm attendance directly:</p>
+      <a class="btn" href="https://wa.me/your-number" target="_blank">
+        Message Organizer
+      </a>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  Built for a legendary weekend 🍾
+</footer>
+
+</body>
+</html>
