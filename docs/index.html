@@ -14,9 +14,7 @@
       --muted: #94a3b8;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -69,11 +67,7 @@
       gap: 8px;
     }
 
-    ul {
-      padding-left: 18px;
-      margin: 0;
-      color: var(--text);
-    }
+    ul { padding-left: 18px; margin: 0; }
 
     .muted {
       color: var(--muted);
@@ -102,10 +96,6 @@
       margin-top: 10px;
     }
 
-    .btn:active {
-      transform: scale(0.98);
-    }
-
     iframe {
       width: 100%;
       height: 220px;
@@ -121,137 +111,144 @@
       font-size: 0.85rem;
     }
 
-    /* Desktop enhancements */
+    hr {
+      border: none;
+      height: 1px;
+      background: #1f2937;
+      margin: 12px 0;
+    }
+
+    /* LANGUAGE SYSTEM */
+    .lang { display: none; }
+    .lang.active { display: block; }
+
+    .lang-toggle {
+      position: fixed;
+      top: 12px;
+      right: 12px;
+      background: #1e293b;
+      border-radius: 999px;
+      padding: 6px;
+      display: flex;
+      gap: 6px;
+      z-index: 999;
+    }
+
+    .lang-toggle button {
+      border: none;
+      background: transparent;
+      color: #94a3b8;
+      padding: 6px 10px;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+
+    .lang-toggle button.active {
+      background: var(--accent);
+      color: white;
+    }
+
     @media (min-width: 768px) {
-      header h1 {
-        font-size: 2.6rem;
-      }
-
-      .grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      iframe {
-        height: 300px;
-      }
+      header h1 { font-size: 2.6rem; }
+      .grid { grid-template-columns: 1fr 1fr; }
+      iframe { height: 300px; }
     }
   </style>
 </head>
 
 <body>
 
+<!-- LANGUAGE TOGGLE -->
+<div class="lang-toggle">
+  <button id="btn-de" onclick="setLang('de')" class="active">🇩🇪</button>
+  <button id="btn-en" onclick="setLang('en')">🇺🇸</button>
+</div>
+
 <header>
-  <h1>🍻 JGA Daniel</h1>
-  <p>One weekend. Maximum fun. No regrets.</p>
-  <div class="badge">Date: tbd • Location: tbd</div>
+  <h1 class="lang de">🍻 JGA Daniel</h1>
+  <h1 class="lang en">🍻 Bachelor Party Daniel</h1>
+
+  <p class="lang de">Ein Wochenende. Maximale Eskalation. Keine Reue.</p>
+  <p class="lang en">One weekend. Maximum fun. No regrets.</p>
+
+  <div class="badge lang de">Datum: tbd • Ort: Nordpol ❄️</div>
+  <div class="badge lang en">Date: tbd • Location: North Pole ❄️</div>
 </header>
 
 <div class="container">
+<div class="grid">
 
-  <div class="grid">
+<!-- OVERVIEW -->
+<div class="card">
+  <h2 class="lang de">📅 Übersicht</h2>
+  <h2 class="lang en">📅 Overview</h2>
 
-    <div class="card">
-      <h2>📅 Overview</h2>
-      <p class="muted">
-        A weekend designed for good friends, bad decisions, and unforgettable memories.
-      </p>
-      <ul>
-        <li>Location: TBD</li>
-        <li>Duration: 3 days</li>
-        <li>Theme: Sports, Beer, Sun & Escalation - but like Gentlemen</li>
-      </ul>
-    </div>
+  <p class="muted lang de">
+    Ein Wochenende für gute Freunde, schlechte Entscheidungen und legendäre Erinnerungen.
+  </p>
+  <p class="muted lang en">
+    A weekend designed for good friends, bad decisions, and unforgettable memories.
+  </p>
 
-    <div class="card">
-      <h2>🗳️ Pick the Date</h2>
-      <p class="muted">
-        Select all weekends that work for you.
-      </p>
+  <ul>
+    <li class="lang de">Ort: TBD</li>
+    <li class="lang en">Location: TBD</li>
 
-      <iframe 
-        src="https://docs.google.com/forms/d/e/1FAIpQLSdKDCkB3GAppXw6TqE8wcwPax6egrEu2AMsbnKkqCATSokq-Q/viewform?embedded=true"
-        height="500">
-      </iframe>
-    </div>
+    <li class="lang de">Dauer: 4 Tage</li>
+    <li class="lang en">Duration: 4 days</li>
 
-    <div class="card">
-      <h2>🗓️ Intended Schedule</h2>
+    <li class="lang de">Thema: Sport, Bier, Sonne & Eskalation – aber stilvoll</li>
+    <li class="lang en">Theme: Sports, beer, sun & escalation – but classy</li>
+  </ul>
+</div>
 
-      <p><strong>✈️ Donnerstag – Anreise</strong></p>
-      <ul>
-        <li>Abflug ab München / Frankfurt / Köln-Bonn</li>
-        <li>👉 Ziel: Ibiza</li>
-        <li>🕓 Abflug: ~16:00–19:00</li>
-        <li>🛬 Ankunft: ~18:00–21:30</li>
-      </ul>
+<!-- VOTING -->
+<div class="card">
+  <h2 class="lang de">🗳️ Datum wählen</h2>
+  <h2 class="lang en">🗳️ Pick the Date</h2>
 
-      <p class="muted">🌅 Abend: Ankommen & locker reinstarten</p>
-      <ul>
-        <li>Check-in + Drinks</li>
-        <li>Dinner (Strand oder Finca)</li>
-      </ul>
+  <p class="muted lang de">
+    Wähle alle Wochenenden, die für dich passen und sende das Formular ab.
+  </p>
+  <p class="muted lang en">
+    Select all weekends that work for you and submit the form.
+  </p>
 
-      <hr style="border-color:#1f2937; margin:12px 0;">
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdKDCkB3GAppXw6TqE8wcwPax6egrEu2AMsbnKkqCATSokq-Q/viewform?embedded=true"></iframe>
+</div>
 
-      <p><strong>🌊 Freitag – Water Action + Club</strong></p>
-      <ul>
-        <li>☀️ Tagsüber: Private Boat / Wakeboard</li>
-        <li>🎧 Nacht: Club @ Hï Ibiza</li>
-      </ul>
+<!-- LOCATION -->
+<div class="card">
+  <h2 class="lang de">📍 Ort</h2>
+  <h2 class="lang en">📍 Location</h2>
 
-      <hr style="border-color:#1f2937; margin:12px 0;">
+  <p class="muted lang de">Nordpol (vorläufig ❄️)</p>
+  <p class="muted lang en">North Pole (for now ❄️)</p>
 
-      <p><strong>🏖️ Samstag – Games + Finale Eskalation</strong></p>
-      <ul>
-        <li>☀️ Tagsüber: Bubble Soccer ⚽</li>
-        <li>🔥 Nacht: Ushuaïa</li>
-      </ul>
+  <iframe src="https://www.google.com/maps?q=90,0&z=3&output=embed"></iframe>
+</div>
 
-      <hr style="border-color:#1f2937; margin:12px 0;">
-
-      <p><strong>✈️ Sonntag – Abreise</strong></p>
-      <ul>
-        <li>🥐 Spätes Frühstück</li>
-        <li>✈️ Rückflug mittags / nachmittags</li>
-        <li>😄 Überleben optional</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h2>📍 Location</h2>
-      <p class="muted">Base location: Hamburg city center</p>
-
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d..."
-        loading="lazy">
-      </iframe>
-    </div>
-
-    <div class="card">
-      <h2>📌 Info</h2>
-      <ul>
-        <li>Bring ID</li>
-        <li>Comfortable shoes</li>
-        <li>Budget for activities</li>
-        <li>Recovery skills required</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h2>📲 RSVP</h2>
-      <p class="muted">Confirm attendance directly:</p>
-      <a class="btn" href="https://wa.me/your-number" target="_blank">
-        Message Organizer
-      </a>
-    </div>
-
-  </div>
-
+</div>
 </div>
 
 <footer>
   Built for a legendary weekend 🍾
 </footer>
+
+<script>
+function setLang(lang) {
+  document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.' + lang).forEach(el => el.classList.add('active'));
+
+  document.getElementById('btn-de').classList.remove('active');
+  document.getElementById('btn-en').classList.remove('active');
+  document.getElementById('btn-' + lang).classList.add('active');
+
+  localStorage.setItem('lang', lang);
+}
+
+setLang(localStorage.getItem('lang') || 'de');
+</script>
 
 </body>
 </html>
